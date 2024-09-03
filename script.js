@@ -2,26 +2,30 @@
 //harus number
 //validasi value
 
-function cariArray() {
+function cariArray(arry, number) {
   //   const number = "";
-  const arry = [];
+  //   const arry = [];
   //   const start = arry[0];
 
+  if (typeof numberToFind !== "number") {
+    console.log("Data yang dicari harus berupa number");
+    return;
+  }
+
   for (let i = 0; i < arry.length; i++) {
-    if (isNumber(number)) {
-      if (arry[i] == number) {
-        return number;
-      } else if (arry[i] !== number) {
-        return "data tidak ada";
-      }
-    } else {
-      console.log("data harus number");
+    if (typeof arry[i] !== "number") {
+      console.log(`Elemen pada index ${i} bukan number`);
+      return;
+    }
+    if (arry[i] === number) {
+      return numberToFind;
     }
   }
-  return number;
+  return "Data tidak ada";
 }
 
-const arry = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const result = cariArray();
+const Mynumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const datanya = 8;
+const result = cariArray(Mynumber, datanya);
 
 console.log(result);
