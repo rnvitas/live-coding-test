@@ -7,7 +7,7 @@ function cariArray(arry, number) {
   //   const arry = [];
   //   const start = arry[0];
 
-  if (typeof numberToFind !== "number") {
+  if (typeof number !== "number") {
     console.log("Data yang dicari harus berupa number");
     return;
   }
