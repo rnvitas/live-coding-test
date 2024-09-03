@@ -18,7 +18,7 @@ function cariArray(arry, number) {
       return;
     }
     if (arry[i] === number) {
-      return numberToFind;
+      return number;
     }
   }
   return "Data tidak ada";
